@@ -219,41 +219,6 @@
 					<h2>El regalo</h2>
 					<p>El mejor regalo para mí es tu compañía, pero si querés obsequiarme algo para ayudarme a cumplir mis sueños te dejo la posibilidad.</p>
 					<button type="button" class="btn btn-default btn-block" onclick="copyToClipboard('rocio.ortiz')">Alias CBU:rocio.ortiz</button>
-
-<script>
-function copyToClipboard(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    // Usar la API de Clipboard si está disponible
-    navigator.clipboard.writeText(text).then(function() {
-      alert('Texto copiado al portapapeles');
-    }, function(err) {
-      console.error('Error al copiar el texto: ', err);
-    });
-  } else {
-    // Crear un textarea temporal para seleccionar y copiar el texto
-    let textArea = document.createElement('textarea');
-    textArea.value = text;
-    // Asegurarse de que el textarea no esté en pantalla
-    textArea.style.position = 'absolute';
-    textArea.style.opacity = 0;
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    try {
-      let successful = document.execCommand('copy');
-      if (successful) {
-        alert('Texto copiado al portapapeles');
-      } else {
-        console.error('No se pudo copiar el texto');
-      }
-    } catch (err) {
-      console.error('Error al intentar copiar el texto: ', err);
-    }
-    document.body.removeChild(textArea);
-  }
-}
-</script>
-
 				</div>
 			</div>
 			<div class="row row-bottom-padded-md">
@@ -322,6 +287,38 @@ function copyToClipboard(text) {
     enableUtc: false
 });
 </script>
-
+<script>
+function copyToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    // Usar la API de Clipboard si está disponible
+    navigator.clipboard.writeText(text).then(function() {
+      alert('Texto copiado al portapapeles');
+    }, function(err) {
+      console.error('Error al copiar el texto: ', err);
+    });
+  } else {
+    // Crear un textarea temporal para seleccionar y copiar el texto
+    let textArea = document.createElement('textarea');
+    textArea.value = text;
+    // Asegurarse de que el textarea no esté en pantalla
+    textArea.style.position = 'absolute';
+    textArea.style.opacity = 0;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      let successful = document.execCommand('copy');
+      if (successful) {
+        alert('Texto copiado al portapapeles');
+      } else {
+        console.error('No se pudo copiar el texto');
+      }
+    } catch (err) {
+      console.error('Error al intentar copiar el texto: ', err);
+    }
+    document.body.removeChild(textArea);
+  }
+}
+</script>
 	</body>
 </html>
