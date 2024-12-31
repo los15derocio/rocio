@@ -842,7 +842,7 @@ form label {
 #fh5co-counter .display-tc h1,
 .fh5co-cover .display-tc h1 {
   margin-bottom: 0px;
-  font-size: 100px;
+  font-size: 140px;
   line-height: 1.5;
   font-family: "Sacramento", Arial, serif;
 }
@@ -850,14 +850,14 @@ form label {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 #fh5co-header .display-tc h2,
@@ -1000,6 +1000,7 @@ form label {
 #fh5co-gallery,
 .fh5co-section {
   padding: 7em 0;
+  padding-bottom: 0em;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -1393,7 +1394,7 @@ form label {
   margin-bottom: 30px;
 }
 #fh5co-started .fh5co-heading h2 {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1551,6 +1552,7 @@ form label {
   text-decoration: none;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
+  display: none !important;	
   background: #444;
 }
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
@@ -1625,6 +1627,7 @@ form label {
 }
 
 .fh5co-nav-toggle {
+  display: none !important;
   position: absolute;
   right: 0px;
   top: 10px;
